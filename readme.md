@@ -1,9 +1,9 @@
 # Same Life
 
 A [Game of Life](http://en.wikipedia.org/wiki/Conways_Game_of_Life) implementation done in a few different languages in a similar
-way, because why not.
+way for comparison, and because why not.
 
-Nick Barth
+0CC Nick Barth
 
 This is free and unencumbered software released into the public domain.
 
