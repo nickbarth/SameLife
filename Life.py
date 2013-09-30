@@ -71,11 +71,11 @@ class Board:
 
     startY = yPos - 1 if yPos - 1 > 0 else 0
     startX = xPos - 1 if xPos - 1 > 0 else 0
-    Y = yPos + 1 if yPos + 1 < self.height else self.height - 1
-    X = xPos + 1 if xPos + 1 < self.width else self.width - 1
+    endY = yPos + 1 if yPos + 1 < self.height else self.height - 1
+    endX = xPos + 1 if xPos + 1 < self.width else self.width - 1
 
-    for y in range(startY, Y+1):
-      for x in range(startX, X+1):
+    for y in range(startY, endY+1):
+      for x in range(startX, endX+1):
         cell = Cell(self.board[y][x], 0)
         if cell.get_state() == LIVE and not self.isSamePosition(y, x, yPos, xPos):
           count = count + 1;
