@@ -75,20 +75,8 @@
             (setq row (append row (list (get-state current-cell))))))
         (setq updated-board (append updated-board (list row)))
         (setq output (concatenate (quote string) output NEWLINE))))
-  (print output)
+  (format t output)
   (setf (board self) updated-board)))
-
-(play (make-board))
-
-(count-neighbours (make-board) 6 2)
-(count-neighbours (make-board) 2 6)
-
-(defmethod count-all ((self board))
-  (let ((num 0))
-    (loop for y from 0 to (height self) do
-      (loop for x from 0 to (width self) do
-        (cond ((eq (get-state (make-cell (nth x (nth y (board self))) 0)) (quote LIVE)) (setq num (+ 1 num))))))
-    num))
 
 (defclass game ()
   ((board :accessor board
@@ -98,6 +86,8 @@
   (make-instance (quote game) :board (make-board)))
 
 (defmethod run ((self game))
-  (play (board self))
   (sleep 0.2)
+  (play (board self))
   (run self))
+
+(run (make-game))
