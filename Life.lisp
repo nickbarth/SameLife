@@ -30,7 +30,7 @@
            :initarg :height)
   (width :accessor width
          :initform 38
-         :initarg :height)
+         :initarg :width)
   (board :accessor board
          :initarg :board
          :initform (quote ((DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD)
